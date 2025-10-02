@@ -1,0 +1,172 @@
+/* รีเซ็ตเบื้องต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* 🔹 พื้นหลังเฉพาะหน้าผลงาน */
+.performance-page {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;     /* ใช้เต็มหน้าจอ */
+  max-width: none; /* ยกเลิกขอบจำกัด 1200px */
+  margin: 0;       /* เอา margin:auto ออก เพื่อไม่ให้กลางจอ */
+  padding: 0 20px; /* เว้นขอบซ้ายขวานิดเดียว (อยากให้ชิดมากขึ้น ก็ลดเหลือ 10px หรือ 0px ได้เลย) */
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo span {
+  background: #fff;
+  color: #2575fc;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+.logo img {
+  height: 50px; /* ปรับขนาดโลโก้ */
+}
+/* เมนู */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffd700; /* hover สีทอง */
+}.nav-links a.active {
+  color: #fff; /* ขาว */
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ffd700; /* เหลืองเวลา hover เท่านั้น */
+}
+/* Section */
+.performance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+.performance h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.performance p {
+  font-size: 18px;
+  color: #eee;
+  margin-bottom: 40px;
+}
+
+/* กล่องผลงาน */
+.projects {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.project-card p {
+  font-size: 15px;
+  color: #ddd;
+  
+}
+
+/* Animation */
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-up {
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
+}
+
+/* หน่วงเวลา */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
+.delay-7 { animation-delay: 1.4s; }
+.delay-8 { animation-delay: 1.6s; }
+.delay-9 { animation-delay: 1.8s; }
+.delay-10 { animation-delay: 2s; }

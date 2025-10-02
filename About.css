@@ -1,0 +1,173 @@
+/* รีเซ็ตเบื้องต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* ไล่สีฟ้า-ม่วง */
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;     /* ใช้เต็มหน้าจอ */
+  max-width: none; /* ยกเลิกขอบจำกัด 1200px */
+  margin: 0;       /* เอา margin:auto ออก เพื่อไม่ให้กลางจอ */
+  padding: 0 20px; /* เว้นขอบซ้ายขวานิดเดียว (อยากให้ชิดมากขึ้น ก็ลดเหลือ 10px หรือ 0px ได้เลย) */
+}
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo span {
+  background: #fff;
+  color: #2575fc;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+.logo img {
+  height: 50px; /* ปรับขนาดโลโก้ */
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffd700; /* hover สีทอง */
+}.nav-links a.active {
+  color: #fff; /* ขาว */
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ffd700; /* เหลืองเวลา hover เท่านั้น */
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 100px; /* กัน navbar ทับ */
+}
+
+.about-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  align-items: center;
+  padding: 30px;
+  background: rgba(255,255,255,0.1); /* กล่องโปร่งใส */
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+}
+
+.about-text h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ffffff; /* หัวข้อเป็นสีทอง ตัดกับพื้นหลังฟ้า */
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: #eee;
+}
+/* 🔹 ส่วนท้าย */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+footer img {
+  width: 50px;
+  margin-top: 10px;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+/* Animation */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-up {
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
+}
+
+/* หน่วงเวลาแต่ละ element */
+.delay-1 { animation-delay: 0.2s; }  /* โลโก้ */
+.delay-2 { animation-delay: 0.4s; }  /* เมนู 1 */
+.delay-3 { animation-delay: 0.6s; }  /* เมนู 2 */
+.delay-4 { animation-delay: 0.8s; }  /* เมนู 3 */
+.delay-5 { animation-delay: 1s; }    /* กล่อง About */
+.delay-6 { animation-delay: 1.2s; }  /* โปรไฟล์ */
+.delay-7 { animation-delay: 1.4s; }  /* หัวข้อ */
+.delay-8 { animation-delay: 1.6s; }
+.delay-9 { animation-delay: 1.8s; }
+.delay-10 { animation-delay: 2s; }
+.delay-11 {animation-delay: 2.2s;}
